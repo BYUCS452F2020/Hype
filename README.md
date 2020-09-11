@@ -6,3 +6,8 @@ We want to use Firestore document-based database for the NoSQL portion of the pr
 Business: Being a subscription-based service, income would come monthly for a small charge per member.
 Legal: We wuld be an LLC.
 Technical: We plan to use Amazon AWS for the relational database.
+
+Team:
+  Jose Alarcon
+  Danielle Case
+  Deise Melo
