@@ -1,1 +1,46 @@
-Temp
+User (primary key, username, email, IG, Bio, Location, Experience, R8, imageUrl) 
+UserID is Primary Key
+Username (Self Explanatory)
+Email (Self Explanatory)
+Instagram a url to instagram handle
+Bio (Self Explanatory)
+Location (Self Explanatory)
+Experience level (Self Explanatory)
+Rate how much they charge for their services
+imageUrl is URL to image stored in image database
+
+Work (WorkID PRIMARY KEY, Location, PhotographerID, ModelID, Date, ImageUrl);
+WorkID is Primary Key
+Location (Self Explanatory)
+PhotographerID is Foreign Key referencing the User table
+ModelID is Foreign Key referencing the User table
+Date (self explanatory)
+ImageUrl is URL to image stored in image database
+Explanation: This table contains the information for a work(photo) for either a Model or Photographer or both
+
+Session (primary key, photographerID, modelID, date, location, comments)
+SessionID is primary key
+photographerID foreign key that refers to user table
+modelID foreign key that refers to user table
+Date (self explanatory)
+location (self explanatory)
+comments (self explanatory) 
+
+WorkKeywordJoin (JoinID PRIMARY KEY, WorkID, KeywordID);
+JoinID is Primary Key
+WorkID is Foreign Key referencing the Work table
+KeywordID is Foreign Key referencing the Keyword Table
+Explanation: This is a join table between the Keywords and a work, making a many to many relationship. Works can have multiple keywords for search and keywords can belong to multiple works.
+
+Keywords( KeywordID PRIMARY KEY, Descriptor, Value)
+KeywordID is the Primary Key
+Descriptor (self explanatory)
+Value (self explanatory)
+
+UserKeywordJoin (KeyJoinID PRIMARY KEY, UserID, KeywordID)
+KeyJoinID is the Primary Key
+UserID is the Foreign Key that refers to the User table
+KeywordID is the Foreign Key that refers to the Keyword table
+
+
+Normalization: Each table has a unique Primary key, and a foreign key that references the correct User, so that the correct information is returned (i.e. if we are looking for a specific user's goals, we can find it easily)
